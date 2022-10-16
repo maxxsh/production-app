@@ -59,22 +59,15 @@ module.exports = {
     ],
     'max-len': ['error', { ignoreComments: true, code: 100 }]
   },
-<<<<<<< HEAD
   globals: {
-    __IS_DEV__: true
+      __IS_DEV__: true,
   },
   overrides: [
-=======
-globals: {
-    __IS_DEV__: true,
-},
-overrides: [
->>>>>>> e7ffb20 (error storybook fixed)
-    {
-      files: ['**/src/**/*.test.{ts,tsx}'],
-      rules: {
-        'i18next/no-literal-string': 'off'
-      }
-    }
-  ]
-}
+      {
+          files: ['**/src/**/*.test.{ts,tsx}'],
+          rules: {
+              'i18next/no-literal-string': 'off',
+          },
+      },
+  ],
+};
