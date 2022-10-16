@@ -44,7 +44,13 @@ module.exports = {
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/no-floating-promises": "off",
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+          markupOnly: true,
+          ignoreAttribute: ['data-testid', 'to'],
+      },
+  ],
     "@typescript-eslint/no-misused-promises": [
       "error",
       {
@@ -55,4 +61,12 @@ module.exports = {
 globals: {
     __IS_DEV__: true,
 },
+overrides: [
+    {
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off',
+        },
+    },
+],
 }
