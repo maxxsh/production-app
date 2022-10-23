@@ -1,5 +1,5 @@
 {
-	"Create custom react function component": {
+	"ts react function component": {
 	"scope": "typescript, typescriptreact",
 	"prefix": "rc",
 	"body": [
@@ -18,5 +18,18 @@
 	"}",
 	],
 	"description": "Create a default React component. The scss module and the function for working with classnames are imported."
-	}
+	},
+	"test function component": {
+		"scope": "typescript, typescriptreact",
+		"prefix": "ts",
+		"body": [
+		"describe('${TM_FILENAME_BASE}', () => {",
+		"  test('', () => {",
+			"    expect().toEqual()",
+		"  })",
+		"})",
+		],
+		"description": "Create a default React component. The scss module and the function for working with classnames are imported."
+		},
+
 }
